@@ -1,0 +1,93 @@
+This mod introduces a set of mechanics for the Night Light, based on [MENTION=21086]Torigoma[/MENTION]'s [URL="http://forums.kleientertainment.com/showthread.php?16914-Mod-Request-Night-Light"]suggestion[/URL] and the discussion that followed. Its main feature is the mechanic of turning Flowers into Evil Flowers through the influence of a lit Night Light.
+
+Blackhouse is free software, licensed under the terms of the GNU GPLv2. The code is hosted at [URL="https://github.com/nsimplex/blackhouse"]GitHub[/URL].
+
+[B]Description[/B]:
+[SPOILER]
+The standard behaviour of a Night Light is preserved. In addition to that, when lit it will affect the entities close to it in the following manner:
+[LIST]
+[*] Flowers turn into Evil Flowers after 1 day of exposure.
+[*] Bees turn into Killer Bees after 10% of a day (48 seconds) of exposure.
+[*] Butterflies turn into Mosquitoes after a few seconds of exposure.
+[*] Vegetables on the ground will turn into Durians after 25% of a day (2 minutes) of exposure.
+[/LIST]
+
+All of these are configurable. Those are just their default values, which probably need some adjustment anyway.
+
+A couple of threats were designed to thwart your farming goals:
+[LIST]
+[*] When a Flower turns into an Evil Flower, there is a 7.5% chance it will catch on fire.
+[*] When you pick an Evil Flower created by a Night Light, every other Evil Flower nearby has a 10% chance of triggering the spawn of a Red Hound offscreen, which will charge after you (as in a hound attack). He will not drop any loot when killed, except for fire.
+[/LIST]
+
+These probabilities are also configurable. Setting a threat to 0 probability will disable it. If you know some Lua and are looking to customize these further, each probability configuration can also be given as a function that acts on its trigger by returning the corresponding probability.
+
+The area of effect of a lit Night Light is a circle with an 8 meter radius. It does not stack with the effect of other nearby Night Lights, and affects up to 16 (the closest 16) valid entities within in. The effect it has over entities is cumulative over time, is never decreased (not even when the Night Light is off, or the entity goes far away) and is preserved between saves, leading it to its inevitable corruption.
+[/SPOILER]
+
+[B]Disclaimer[/B]:
+[SPOILER]
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+[/SPOILER]
+
+[B]Installation[/B]:
+[SPOILER]
+Unzip the Blackhouse folder into your mods directory. Then, enable it through the mod management interface found within the game's main menu.
+[/SPOILER]
+
+[B]Configuration[/B]:
+[SPOILER]
+Just edit the file rc.lua in the Blackhouse folder. Every option's effect is explained in the file. Knowledge of Lua is not required, as the file uses a simple "OPTION = VALUE" format.
+
+@SAMPLECONFIGURATION@
+[/SPOILER]
+
+[B]Planned Features[/B]:
+[SPOILER]
+[LIST]
+[*] Items inside the player's inventory or inside containers will also be affected if within range of a lit Night Light.
+[/LIST]
+[/SPOILER]
+
+[B]To-Do[/B]:
+[SPOILER]
+[LIST]
+[*] Figuring out something better to do with Butterflies.
+[/LIST]
+[/SPOILER]
+
+[B]Known bugs[/B]:
+[SPOILER]
+None, since beta release. But I'd love to see this record broken!
+[/SPOILER]
+
+[B]Changelog[/B]:
+[SPOILER]
+[U]Version 1.2[/U] (2013-07-15)
+[LIST]
+[*] Added a mod icon.
+[/LIST]
+[U]Version 1.1[/U] (2013-07-02)
+[LIST]
+[*] Licensed the mod under the GNU GPLv2.
+[*] Strange New Powers compatibility.
+[*] Butterflies now turn into Mosquitoes.
+[*] Configuration values are now type and range checked, with precise error messages given to the player in case an option is inconsistent with what it should be.
+[*] Files related to configuration (rc.lua and rc.defaults.lua) now have DOS-style line endings. Ugh.
+[*] Implementation improvements and optimizations, such as the use of Set instead of PreorderedArray.
+[/LIST]
+
+[U]Version 1.0[/U] (2013-06-20)
+[LIST]
+[*] Release.
+[/LIST]
+[/SPOILER]
+

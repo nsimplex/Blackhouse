@@ -1,0 +1,16 @@
+assert = GLOBAL.assert
+error = GLOBAL.error
+type = GLOBAL.type
+tostring = GLOBAL.tostring
+getmetatable = GLOBAL.getmetatable
+setmetatable = GLOBAL.setmetatable
+getfenv = GLOBAL.getfenv
+setfenv = GLOBAL.setfenv
+table = GLOBAL.table
+pairs = GLOBAL.pairs
+ipairs = GLOBAL.ipairs
+math = GLOBAL.math
+date = GLOBAL.os.date
+module = GLOBAL.module
+require = GLOBAL.require
+date = GLOBAL.os.date
