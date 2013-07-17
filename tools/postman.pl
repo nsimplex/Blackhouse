@@ -1,4 +1,4 @@
-#!/bin/perl
+#!/usr/bin/perl
 
 my $mode = $ARGV[0];
 die if $mode ne "discussion" and $mode ne "upload";

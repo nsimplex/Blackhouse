@@ -119,11 +119,9 @@ if ($ARGV[0] eq "rc") {
 	}
 } elsif ($ARGV[0] eq "rc.defaults") {
 	print $RC_DEFAULTS_PRE;
-	print "return function()\n";
 	while(<STDIN>) {
-		print( "\t", rc_defaults_feeder($_) );
+		print( rc_defaults_feeder($_) );
 	}
-	print "end\n";
 } elsif ($ARGV[0] eq "rc.example") {
 	print $RC_PRE;
 	while(<STDIN>) {
