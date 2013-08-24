@@ -1,7 +1,7 @@
 -----
 --[[ Blackhouse ]] VERSION="1.2"
 --
--- Last updated: 2013-08-16
+-- Last updated: 2013-08-24
 -----
 
 --[[
