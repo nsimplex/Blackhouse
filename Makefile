@@ -1,6 +1,6 @@
 PROJECT:=Blackhouse
 AUTHOR:=simplex
-VERSION:=1.2
+VERSION:=1.2.1
 API_VERSION:=3
 DESCRIPTION:=Adds a set of mechanics for the Night Light, centered around the turning of Flowers into Evil Flowers.
 FORUM_THREAD:=21767-Download-Blackhouse

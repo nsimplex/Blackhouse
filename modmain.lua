@@ -1,5 +1,5 @@
 -----
---[[ Blackhouse ]] VERSION="1.2"
+--[[ Blackhouse ]] VERSION="1.2.1"
 --
 -- Last updated: 2013-08-24
 -----
